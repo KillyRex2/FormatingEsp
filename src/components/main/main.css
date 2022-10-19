@@ -1,0 +1,25 @@
+h1{
+    color: #000;
+}
+
+textarea{
+    width:200%;
+    height: 200%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    resize: none;
+    color: var(--color-white)
+}
+
+.container.contact__container {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+
+.bt{
+     margin-left: 170px;
+}
