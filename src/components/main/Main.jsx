@@ -31,20 +31,29 @@ const About = () => {
     
   };
 
+  const noSpace = (text) => {
+    let regEx = new RegExp (' ', 'g')
+    return text.replace(regEx, '')
+  } 
   const format = () => {
     
     let arr = message.split('\n')
     let aux = []
     let count = 1
     let datAux
+    let stData
+
+
     arr.forEach(element => {
         if(element !== '')
         if(count === 1){
             datAux = element
+            stData = datAux.trim()
             count = 2
         }
         else if(count === 2) {
-            aux.push(`(${datAux}, ${element})`)
+            aux.push(`(${stData}, ${element})`)
+            console.log(noSpace(stData))
             count = 1
         }
     });
